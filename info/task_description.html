@@ -17,6 +17,7 @@
 
 <div>
     The billing is represented as an array with information about calls.
+    Help Nicola calculate the cost of Sophia calls.
     Each call is represented as a string with date, time and duration of the call in seconds in the follow format:<br>
     <pre class="format">
 "YYYY-MM-DD hh:mm:ss duration"
@@ -24,50 +25,60 @@
     The date and time in this information are the start of the call.
 </div>
 
-<p>
+<div>
     Spacecommunication company has several rules to calculate the cost of calls:
     <ul>
-    <li>
-        First 100 (one hundred) minutes in one day are cost at 1 coin for a minute;
-    </li>
-    <li>
-        After 100 minutes in one day, each minute is cost at 2 coins for a minute;
-    </li>
-    <li>
-        All calls are rounded up to minutes. For example 59 sec &asymp; 1 min, 61 sec &asymp; 2 min;
-    </li>
-    <li>
-        Calls counted to a day when they begun. For example if a call was started 2014-01-01 23:59:59, then it counted to 2014-01-01;
-    </li>
+        <li>
+            First 100 (one hundred) minutes in one day are cost at 1 coin for a minute;
+        </li>
+        <li>
+            After 100 minutes in one day, each minute is cost at 2 coins for a minute;
+        </li>
+        <li>
+            All calls are rounded up to minutes. For example 59 sec &asymp; 1 min, 61 sec &asymp; 2 min;
+        </li>
+        <li>
+            Calls counted to a day when they begun. For example if a call was started 2014-01-01 23:59:59, then it
+            counted to 2014-01-01;
+        </li>
 
 
     </ul>
-</p>
+</div>
 
-<p style="text-align: center;">
-    <img class="for_info_only" title="example" src="{{MEDIA}}example.png" alt="example" width="392px"/>
-    <img class="for_editor_only" title="example" src="{{MEDIA}}example.png" alt="example" width="380px"/>
-</p>
 
-<p><i>( Explain input and output values )</i></p>
+<div>
+    For example:
+    <pre class="format">
+2014-01-01 01:12:13 181
+2014-01-02 20:11:10 600
+2014-01-03 01:12:13 6009
+2014-01-03 12:13:55 200
+</pre>
+    First day -- 181s&asymp;4m -- 4 coins;<br>
+    Second day -- 600s=10m -- 10 coins;<br>
+    Third day -- 6009s&asymp;101m + 200s&asymp;4m -- 100 + 5 * 2 = 110 coins;<br>
+    Total -- 124 coins.
+
+</div>
 <p>
-    <strong>Input: </strong> Two arguments. Both are int
+    <strong>Input: </strong> Information about calls as a tuple of strings.
 </p>
 
 <p>
-    <strong>Output: </strong> Int. 
+    <strong>Output: </strong> The total cost as an integer.
 </p>
-
 
 
 <div class="for_info_only">
-    <p><i>( Put some usage examples )</i></p>
     <p>
         <strong>Example:</strong>
     </p>
     <pre class="brush: python">
-checkio(3, 2) == 5
-checkio(5, 7) == 12
+total_cost("2014-01-01 01:12:13 181",
+           "2014-01-02 20:11:10 600",
+           "2014-01-03 01:12:13 6009",
+           "2014-01-03 12:13:55 200") == 124
     </pre>
 </div>
 
