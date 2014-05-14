@@ -40,7 +40,7 @@ requirejs(['ext_editor_1', 'jquery_190', 'raphael_210'],
             }
 
             var checkioInput = data.in;
-            var checkioInputStr = ' checkio(' + JSON.stringify(checkioInput)  + ')';
+            var checkioInputStr = ' total_cost(<br>' + JSON.stringify(checkioInput).replace("[", "(").replace("]", ")").replace(/\",/g, '",<br>')  + ')';
 
             var failError = function(dError) {
                 $content.find('.call').html('Fail: ' + checkioInputStr);
