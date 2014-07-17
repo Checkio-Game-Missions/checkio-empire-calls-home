@@ -1,0 +1,102 @@
+<style>
+    pre.format {
+        background-color: #EBEDED;
+        margin: 5px;
+        padding: 3px;
+        border: solid 1px #737370;
+        border-radius: 3px;
+        --webkit-border-radius: 3px;
+    }
+    .rules li {
+        list-style-type: circle;
+        margin-left: 40px;
+    }
+</style>
+
+<p>
+    Nikoletta úgy véli, hogy Zsófia túl gyakran telefonál Haza és ezért az ő telefonszámlája 
+    túlságosan magas. Ő elővette Zsófia legutóbbi pár napra vonatkozó telefonszámla adatait, 
+    és ki szeretné számolni a lebonyolított hívások költségét.
+</p>
+
+<p>
+    A hívások adatait tartalmazó számla egy tömbben van ábrázolva. Segítsen Nikolettának 
+    kiszámolni Zsófia összes hívásainak költségét. Mindenegyes hívás egy karakterláncban 
+    van ábrázolva, amely tartalmazza a hívás dátumát, időpontját és időtartamát másodpercekben 
+    az alábbi formában:<br>
+    <pre class="format">
+"YYYY-MM-DD hh:mm:ss hívásidőtartam"</pre>
+    A megadott dátum és az idő a hívás kezdeményezésének időpontját mutatja.
+</p>
+
+<p>
+    Az Űridő Távközlési Vállalat több szabályt is megállapított a hívások számlázására:
+    <ul class="rules">
+        <li>
+            Ugyanazon a napon bonyolított hívás első 100 perce 1 űrpengőt ér percenként;
+        </li>
+        <li>
+            Ugyanazon a napon bonyolított 100 percet meghaladó hívás díja 2 űrpengőt ér percenként;
+        </li>
+        <li>
+            Minden hívást a legközelebb álló perchez kell kerekíteni. Például, 59 másodperc &asymp; 
+            1 perc, 61 másodperc &asymp; 2 perc;
+        </li>
+        <li>
+            A számlázás a híváskezdeményezés napjától kell számítani. Például, ha a hívást 
+            2014-01-01 23:59:59-kor kezdeményezték, akkor azt 2014-01-01 dátummal kell kiszámlázni.
+        </li>
+
+
+    </ul>
+</p>
+
+
+<p>
+    Például:
+    <pre class="format">
+2014-01-01 01:12:13 181
+2014-01-02 20:11:10 600
+2014-01-03 01:12:13 6009
+2014-01-03 12:13:55 200
+</pre>
+    Az első nap -- 181 másodperc &asymp; 4 perc -- 4 űrpengő;<br>
+    A második nap -- 600 másodperc = 10 perc -- 10 űrpengő;<br>
+    A harmadik nap -- 6009 másodperc &asymp; 101 perc + 200 másodperc &asymp; 4 perc -- 100 + 5 * 2 = 110 űrpengő;<br>
+    Összesen -- 124 űrpengő.
+
+</p>
+<p>
+    <strong>Bemeneti adatok: </strong> a híváslista karakterláncokból álló rendezett n-esek (tuple) formájában.
+</p>
+
+<p>
+    <strong>Kimeneti adatok: </strong> a hívások összköltsége egész (int) számként.
+</p>
+
+
+<div class="for_info_only">
+    <p>
+        <strong>Példa:</strong>
+    </p>
+    <pre class="brush: python">
+total_cost(("2014-01-01 01:12:13 181",
+            "2014-01-02 20:11:10 600",
+            "2014-01-03 01:12:13 6009",
+            "2014-01-03 12:13:55 200")) == 124
+    </pre>
+</div>
+
+<p class="for_info_only">
+    <strong>Alkalmazása: </strong>
+    E küldetés során Ön elsajátíthatja a különböző adattípusok elemzését és feldolgozását. 
+    Néha nem lesz szüksége a teljes információra és csak az adatok egy bizonyos részét 
+    kell majd felhasználnia.
+</p>
+
+<p>
+    <strong>Előfeltételek:</strong>
+    0 &lt; len(hívások) &le; 30<br>
+    0 &lt; hívás_időtartama &le; 7200<br>
+    A számla dátum és idő szerint van rendezve.
+</p>
