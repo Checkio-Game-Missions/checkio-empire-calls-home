@@ -1,4 +1,4 @@
-checkio-task-calls-home
+calls-home
 =======================
 
-Checkio Mission "Calls to Home"
+Ore Store 1.4 "Calls to Base"
