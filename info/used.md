@@ -1,5 +1,4 @@
 **How it is used:**
 
-This mission will teach you how to parse and analyse various types data.
-Sometimes you don't need the full data and should single out only important fragments.
-
+This mission will teach you how to parse and analyse various types data
+and encourages you to single out important fragments from a larger dataset.

@@ -1,5 +1,7 @@
-It looks like our store accountant makes long distance calls too often and his phone bill has becoime much too expensive.
-We would controla his use of the communications systems and calculate how much it costs.
+It looks like our store accountant makes long distance calls too often and his phone bill has become much too expensive.
+We would control his use of the communications systems and calculate how much it costs.
+
+Perhaps we should put him on a texting plan instead.
 
 The bill is represented as an array with information about the calls that our accountant has made.
 Write a function to calculate the cost of these calls.
@@ -17,7 +19,7 @@ Space-Time Communications Co. has several rules on how it calculates the cost of
 - Calls are billed based on the day when they began
 So if a call was started at 2014-01-01 23:59:59, then it counts as having started oon 2014-01-01.
 
-Perhaps we should put him on a texting plan instead.
+
 
 Here's an example communications bill:
 
