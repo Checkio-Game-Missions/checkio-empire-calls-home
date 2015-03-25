@@ -19,5 +19,5 @@ api.add_listener(
             'python-27': cover,
             'python-3': cover
         },
-        function_name="total_cost"
+        DEFAULT_FUNCTION_NAME="total_cost"
     ).on_ready)
