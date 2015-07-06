@@ -11,7 +11,7 @@ class Referee(RefereeBase):
     ENVIRONMENTS = settings_env.ENVIRONMENTS
 
     DEFAULT_FUNCTION_NAME = "total_cost"
-    FUNCTION_NAME = {
+    FUNCTION_NAMES = {
         ENV_NAME.JS_NODE: "totalCost"
     }
     ENV_COVERCODE = {
