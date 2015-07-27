@@ -12,7 +12,7 @@ Space-Time Communications Co. has several rules on how it calculates the cost of
 - After the first 100 minutes in one day, each minute costs 2 coins per minute;
 - All calls are rounded up to the nearest minute. For example 59 sec &asymp; 1 min, 61 sec &asymp; 2 min;
 - Calls are billed based on the day when they began
-So if a call was started at 2014-01-01 23:59:59, then it counts as having started oon 2014-01-01.
+So if a call was started at 2014-01-01 23:59:59, then it counts as having started on 2014-01-01.
 
 
 
