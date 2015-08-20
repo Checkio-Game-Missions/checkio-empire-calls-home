@@ -23,4 +23,6 @@ if (!global.is_checking) {
         "2014-02-05 02:00:00 60",
         "2014-02-05 03:00:00 60",
         "2014-02-05 04:00:00 6000"]), 106, "Precise calls");
+    console.log("Coding complete? Click 'Check' to review your tests and earn cool rewards!");
 }
+
