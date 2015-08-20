@@ -16,3 +16,5 @@ if __name__ == '__main__':
                        "2014-02-05 02:00:00 60",
                        "2014-02-05 03:00:00 60",
                        "2014-02-05 04:00:00 6000")) == 106, "Precise calls"
+
+    print("All set? Click 'Check' to review your code and earn rewards!")
